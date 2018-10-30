@@ -15,3 +15,13 @@ def validate_address_ip(ip):
             return False
 
     return new_ip[:-1]
+
+
+def validator_ips(list_ip):
+    validateed_ips = []
+    for ip in list_ip:
+        validate_ip = validate_address_ip(ip)
+        if validate_ip:
+            validateed_ips.append(ip)
+
+    return validateed_ips
